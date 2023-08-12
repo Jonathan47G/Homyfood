@@ -1,0 +1,19 @@
+$primary-color:#9356DC;
+$secondarry-color:#FF79DA;
+$third-color:#99E2D0;
+$font-color-prim: #008766;
+$background-color:#EAEAEA;
+$footer-brackground:#353535;
+$ombre-box: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+$title-font:'Shrikhand', cursive;
+$normal-font:'Roboto', sans-serif;
+$button-color: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
+$ombre-button: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+
+
+
+
+@mixin flex-property($display, $flex-direction) {
+    display: $display;
+    flex-direction: $flex-direction;
+}

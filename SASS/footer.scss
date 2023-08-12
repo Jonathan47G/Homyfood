@@ -1,0 +1,34 @@
+@import '../SASS/variables-mixins.scss';
+
+.footer__nav {
+    @include flex-property(flex, column);
+    background-color: $footer-brackground;
+    color :#fff;
+    box-sizing: border-box;
+    padding-left:25px;
+    padding-bottom: 22px;
+    padding-top: 22px;
+    gap: 5px;
+
+    a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1em;
+        font-weight: 500;
+        
+    }
+    h3 {
+        font-size: 1.125em;
+        font-family: $title-font;
+        font-weight: 400;
+    }
+    ul {
+        list-style: none;
+        padding-left: 0;
+        margin-top: 16px;
+        li {
+            margin-top: 7px;
+         }
+    }
+    
+}

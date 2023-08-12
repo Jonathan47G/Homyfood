@@ -1,0 +1,13 @@
+@import '../SASS/variables-mixins.scss';
+
+* {
+    margin:0;
+    width: 100%;
+    max-width:350px;
+}
+
+p, h1, h2, h3, a {
+    font-family: $normal-font;
+}
+
+

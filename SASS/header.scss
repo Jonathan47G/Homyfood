@@ -1,0 +1,90 @@
+@import "../SASS/variables-mixins.scss";
+
+
+/* Styles pour le header principal */
+.header__principal {
+  /* Flex container avec orientation en colonne */
+  @include flex-property(flex, column);
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+/* Styles pour l'élément d'information */
+  &__info {
+    /* Flex container avec orientation en colonne */
+    @include flex-property(flex, column);
+    width: 100%;
+/* Styles pour le logo */
+    &__logo {
+      position: relative;
+      box-shadow: $ombre-box;
+      width: 100%;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      img {
+        width: 66%;
+      }
+    }
+ /* Styles pour la localisation */
+    &__localisation {
+      background-color: $background-color;
+      width: 100%;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      button {
+        font-size: 1em;
+        font-weight: 500;
+        background-color: blue;
+        @include flex-property(flex, row);
+        justify-content: center;
+        gap:15px;
+        background-color: $background-color;
+        border: none;
+        i {
+          width: 5%;
+        }
+      }
+    }
+     /* Styles pour le texte */
+    &__txt {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      background-color :#F6F6F6;
+      
+        h1{
+          width: 90%;
+          font-size: 1.8em;
+          font-weight: 700;
+          margin-bottom: 10px;
+          margin-left: 15px;
+          box-sizing: border-box;
+        }
+        p {
+          font-size: 1.125em;
+          font-weight: 300;
+        }
+        
+    }
+    
+  }
+   /* Styles pour le bouton Call to Action (cta) */
+    .cta {
+       /* Centre verticalement tout le contenu à l'intérieur du conteneur */
+    align-items: center;
+    margin-top: 40px;
+    button {
+      width: 100%;
+      text-align: center;
+      border-radius: 25px;
+      background: $button-color;
+      color: white;
+      font-size: 1em;
+      font-weight: 500;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      width: 75%;
+      border: none;
+      box-shadow: $ombre-button;
+    }
+  }
+}

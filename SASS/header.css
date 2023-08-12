@@ -1,0 +1,88 @@
+@charset "UTF-8";
+/* Styles pour le header principal */
+.header__principal {
+  /* Flex container avec orientation en colonne */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  /* Styles pour l'élément d'information */
+  /* Styles pour le bouton Call to Action (cta) */
+}
+.header__principal__info {
+  /* Flex container avec orientation en colonne */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* Styles pour le logo */
+  /* Styles pour la localisation */
+  /* Styles pour le texte */
+}
+.header__principal__info__logo {
+  position: relative;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.header__principal__info__logo img {
+  width: 66%;
+}
+.header__principal__info__localisation {
+  background-color: #EAEAEA;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.header__principal__info__localisation button {
+  font-size: 1em;
+  font-weight: 500;
+  background-color: blue;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+  background-color: #EAEAEA;
+  border: none;
+}
+.header__principal__info__localisation button i {
+  width: 5%;
+}
+.header__principal__info__txt {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #F6F6F6;
+}
+.header__principal__info__txt h1 {
+  width: 90%;
+  font-size: 1.8em;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  box-sizing: border-box;
+}
+.header__principal__info__txt p {
+  font-size: 1.125em;
+  font-weight: 300;
+}
+.header__principal .cta {
+  /* Centre verticalement tout le contenu à l'intérieur du conteneur */
+  align-items: center;
+  margin-top: 40px;
+}
+.header__principal .cta button {
+  width: 100%;
+  text-align: center;
+  border-radius: 25px;
+  background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
+  color: white;
+  font-size: 1em;
+  font-weight: 500;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 75%;
+  border: none;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}/*# sourceMappingURL=header.css.map */

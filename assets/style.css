@@ -163,7 +163,7 @@ p, h1, h2, h3, a {
   width: 90%;
   align-items: end;
   gap: 25px;
-  border-radius: 0 0 15px 15px;
+  border-radius: 15px;
   text-decoration: none;
   color: #000;
   background-color: #fff;
@@ -192,14 +192,14 @@ p, h1, h2, h3, a {
   text-align: end;
   bottom: 30px;
   right: 30px;
-  font-size: 1em;
-  font-weight: 500;
+  font-size: 1.5em;
 }
 .conteneur__principal__restaurant__card__content__txt {
   margin-left: 15px;
 }
 .conteneur__principal__restaurant__card__content__txt h3 {
   font-weight: 700;
+  margin-bottom: 5px;
 }
 .conteneur__principal__restaurant__card__content__txt p {
   font-weight: 300;

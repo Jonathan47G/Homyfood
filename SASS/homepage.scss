@@ -2,7 +2,6 @@
 
 .conteneur__principal {
   @include flex-property(flex, column);
-  width: 100%;
   margin-top: 50px;
   h2 {
     margin-left: 25px;
@@ -10,15 +9,13 @@
 
   &__fonctionnement {
     @include flex-property(flex, column);
-
+    align-items: center;
     margin-top: 50px;
-    padding-bottom: 70px;
+    padding-bottom: 50px;
     gap: 25px;
-    width: 100%;
 
     &__card {
       display: flex;
-      margin-left: 25px;
       width: 75%;
       gap: 25px;
       align-items: center;
@@ -32,14 +29,10 @@
       .solid-purple {
         color: $primary-color;
       }
-      i {
-        margin-left: 5px;
-        width: 5%;
-      }
       &__nombre {
         color: #fff;
-        margin-left: -35px;
-        position: absolute;
+        position:relative;
+        left: -30px;
         border-radius: 25px;
         background-color: $primary-color;
         width: 20px;
@@ -54,19 +47,18 @@
     background-color: #f6f6f6;
     padding-top: 60px;
     padding-bottom: 60px;
-    width: 100%;
     margin: 0;
     &__card {
       @include flex-property(flex, column);
       margin-left: 5%;
       margin-right: 5%;
-      width: 90%;
-      align-items: end;
       gap: 25px;
       border-radius: 15px;
       text-decoration: none;
       color: #000;
       background-color: #fff;
+      &__img {
+        position: relative;
       img {
         width: 100%;
         height: 250px;
@@ -74,30 +66,37 @@
         border-radius: 15px 15px 0 0;
       }
       .etiquette {
-        border-radius: 2px;
-        margin-top: 13px;
-        margin-right: 13px;
-        text-align: center;
+        font-family: $normal-font;
+        top:13px;
+        right: 13px;
         position: absolute;
+        border-radius: 2px;
+        text-align: center;
         color: $font-color-prim;
         background-color: $third-color;
         width: 80px;
+        padding: 10px;
         font-weight: 500;
         font-size: 0.8em;
       }
+    }
       &__content {
+        position: relative;
+        padding-bottom: 30px;
         i {
-          position: relative;
-          text-align: end;
-          bottom:30px;
-          right: 30px;
+          width: 24px;
+          height: 24px;
+          margin: 0;
+          position: absolute;
+          top:30px;
+          right:25px;
           font-size: 1.5em;
         }
         &__txt {
+          margin-top: 15px;
           margin-left: 15px;
           h3 {
             font-weight: 700;
-            margin-bottom: 5px;
           }
           p {
             font-weight: 300;

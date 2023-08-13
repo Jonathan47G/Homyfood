@@ -1,8 +1,6 @@
 @charset "UTF-8";
 * {
   margin: 0;
-  width: 100%;
-  max-width: 350px;
 }
 
 p, h1, h2, h3, a {
@@ -14,9 +12,7 @@ p, h1, h2, h3, a {
   /* Flex container avec orientation en colonne */
   display: flex;
   flex-direction: column;
-  width: 100%;
   text-align: center;
-  justify-content: center;
   /* Styles pour l'élément d'information */
   /* Styles pour le bouton Call to Action (cta) */
 }
@@ -24,7 +20,6 @@ p, h1, h2, h3, a {
   /* Flex container avec orientation en colonne */
   display: flex;
   flex-direction: column;
-  width: 100%;
   /* Styles pour le logo */
   /* Styles pour la localisation */
   /* Styles pour le texte */
@@ -40,18 +35,16 @@ p, h1, h2, h3, a {
   width: 66%;
 }
 .header__principal__info__localisation {
+  display: flex;
   background-color: #EAEAEA;
-  width: 100%;
   padding-top: 15px;
   padding-bottom: 15px;
+  justify-content: center;
 }
 .header__principal__info__localisation button {
   font-size: 1em;
   font-weight: 500;
-  background-color: blue;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   gap: 15px;
   background-color: #EAEAEA;
   border: none;
@@ -60,18 +53,14 @@ p, h1, h2, h3, a {
   width: 5%;
 }
 .header__principal__info__txt {
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
   background-color: #F6F6F6;
+  padding: 25px;
 }
 .header__principal__info__txt h1 {
   width: 90%;
-  font-size: 1.8em;
+  font-size: 1.5em;
   font-weight: 700;
-  margin-bottom: 10px;
-  margin-left: 15px;
-  box-sizing: border-box;
+  margin: 10px;
 }
 .header__principal__info__txt p {
   font-size: 1.125em;
@@ -79,11 +68,13 @@ p, h1, h2, h3, a {
 }
 .header__principal .cta {
   /* Centre verticalement tout le contenu à l'intérieur du conteneur */
+  display: flex;
+  justify-content: center;
   align-items: center;
   margin-top: 40px;
 }
 .header__principal .cta button {
-  width: 100%;
+  width: 220px;
   text-align: center;
   border-radius: 25px;
   background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
@@ -92,7 +83,6 @@ p, h1, h2, h3, a {
   font-weight: 500;
   padding-top: 15px;
   padding-bottom: 15px;
-  width: 75%;
   border: none;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
@@ -100,7 +90,6 @@ p, h1, h2, h3, a {
 .conteneur__principal {
   display: flex;
   flex-direction: column;
-  width: 100%;
   margin-top: 50px;
 }
 .conteneur__principal h2 {
@@ -109,14 +98,13 @@ p, h1, h2, h3, a {
 .conteneur__principal__fonctionnement {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-top: 50px;
-  padding-bottom: 70px;
+  padding-bottom: 50px;
   gap: 25px;
-  width: 100%;
 }
 .conteneur__principal__fonctionnement__card {
   display: flex;
-  margin-left: 25px;
   width: 75%;
   gap: 25px;
   align-items: center;
@@ -131,14 +119,10 @@ p, h1, h2, h3, a {
 .conteneur__principal__fonctionnement__card .solid-purple {
   color: #9356DC;
 }
-.conteneur__principal__fonctionnement__card i {
-  margin-left: 5px;
-  width: 5%;
-}
 .conteneur__principal__fonctionnement__card__nombre {
   color: #fff;
-  margin-left: -35px;
-  position: absolute;
+  position: relative;
+  left: -30px;
   border-radius: 25px;
   background-color: #9356DC;
   width: 20px;
@@ -152,7 +136,6 @@ p, h1, h2, h3, a {
   background-color: #f6f6f6;
   padding-top: 60px;
   padding-bottom: 60px;
-  width: 100%;
   margin: 0;
 }
 .conteneur__principal__restaurant__card {
@@ -160,46 +143,55 @@ p, h1, h2, h3, a {
   flex-direction: column;
   margin-left: 5%;
   margin-right: 5%;
-  width: 90%;
-  align-items: end;
   gap: 25px;
   border-radius: 15px;
   text-decoration: none;
   color: #000;
   background-color: #fff;
 }
-.conteneur__principal__restaurant__card img {
+.conteneur__principal__restaurant__card__img {
+  position: relative;
+}
+.conteneur__principal__restaurant__card__img img {
   width: 100%;
   height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15px 15px 0 0;
 }
-.conteneur__principal__restaurant__card .etiquette {
-  border-radius: 2px;
-  margin-top: 13px;
-  margin-right: 13px;
-  text-align: center;
+.conteneur__principal__restaurant__card__img .etiquette {
+  font-family: "Roboto", sans-serif;
+  top: 13px;
+  right: 13px;
   position: absolute;
+  border-radius: 2px;
+  text-align: center;
   color: #008766;
   background-color: #99E2D0;
   width: 80px;
+  padding: 10px;
   font-weight: 500;
   font-size: 0.8em;
 }
-.conteneur__principal__restaurant__card__content i {
+.conteneur__principal__restaurant__card__content {
   position: relative;
-  text-align: end;
-  bottom: 30px;
-  right: 30px;
+  padding-bottom: 30px;
+}
+.conteneur__principal__restaurant__card__content i {
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  position: absolute;
+  top: 30px;
+  right: 25px;
   font-size: 1.5em;
 }
 .conteneur__principal__restaurant__card__content__txt {
+  margin-top: 15px;
   margin-left: 15px;
 }
 .conteneur__principal__restaurant__card__content__txt h3 {
   font-weight: 700;
-  margin-bottom: 5px;
 }
 .conteneur__principal__restaurant__card__content__txt p {
   font-weight: 300;
@@ -216,6 +208,10 @@ p, h1, h2, h3, a {
   padding-bottom: 22px;
   padding-top: 22px;
   gap: 5px;
+}
+.footer__nav i {
+  width: 35px;
+  color: #fff;
 }
 .footer__nav a {
   text-decoration: none;
@@ -235,4 +231,36 @@ p, h1, h2, h3, a {
 }
 .footer__nav ul li {
   margin-top: 7px;
+}
+
+/************ BOUTON CTA *******************/
+.cta button:hover {
+  background: linear-gradient(175deg, #a16be0 0%, #ff93e1 100%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+/************** COEUR CARD *************/
+/* Style pour le cœur vide */
+.heart-icone-regular i {
+  cursor: pointer;
+  transition: background-size 750ms ease-in-out;
+  background-size: 100% 100%;
+  background-position: bottom;
+}
+
+/* Style pour le cœur plein */
+.heart-icone-solid i {
+  cursor: pointer;
+  opacity: 0;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 750ms ease-in-out, background-size 750ms ease-in-out;
+  background-size: 100% 0;
+}
+
+/* Au survol du cœur plein, afficher le remplissage */
+.heart-icone-solid:hover i {
+  opacity: 1;
+  background-size: 100% 100%;
 }/*# sourceMappingURL=style.css.map */

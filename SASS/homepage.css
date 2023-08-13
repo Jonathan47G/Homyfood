@@ -1,7 +1,6 @@
 .conteneur__principal {
   display: flex;
   flex-direction: column;
-  width: 100%;
   margin-top: 50px;
 }
 .conteneur__principal h2 {
@@ -10,14 +9,13 @@
 .conteneur__principal__fonctionnement {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-top: 50px;
-  padding-bottom: 70px;
+  padding-bottom: 50px;
   gap: 25px;
-  width: 100%;
 }
 .conteneur__principal__fonctionnement__card {
   display: flex;
-  margin-left: 25px;
   width: 75%;
   gap: 25px;
   align-items: center;
@@ -32,14 +30,10 @@
 .conteneur__principal__fonctionnement__card .solid-purple {
   color: #9356DC;
 }
-.conteneur__principal__fonctionnement__card i {
-  margin-left: 5px;
-  width: 5%;
-}
 .conteneur__principal__fonctionnement__card__nombre {
   color: #fff;
-  margin-left: -35px;
-  position: absolute;
+  position: relative;
+  left: -30px;
   border-radius: 25px;
   background-color: #9356DC;
   width: 20px;
@@ -53,7 +47,6 @@
   background-color: #f6f6f6;
   padding-top: 60px;
   padding-bottom: 60px;
-  width: 100%;
   margin: 0;
 }
 .conteneur__principal__restaurant__card {
@@ -61,46 +54,55 @@
   flex-direction: column;
   margin-left: 5%;
   margin-right: 5%;
-  width: 90%;
-  align-items: end;
   gap: 25px;
   border-radius: 15px;
   text-decoration: none;
   color: #000;
   background-color: #fff;
 }
-.conteneur__principal__restaurant__card img {
+.conteneur__principal__restaurant__card__img {
+  position: relative;
+}
+.conteneur__principal__restaurant__card__img img {
   width: 100%;
   height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15px 15px 0 0;
 }
-.conteneur__principal__restaurant__card .etiquette {
-  border-radius: 2px;
-  margin-top: 13px;
-  margin-right: 13px;
-  text-align: center;
+.conteneur__principal__restaurant__card__img .etiquette {
+  font-family: "Roboto", sans-serif;
+  top: 13px;
+  right: 13px;
   position: absolute;
+  border-radius: 2px;
+  text-align: center;
   color: #008766;
   background-color: #99E2D0;
   width: 80px;
+  padding: 10px;
   font-weight: 500;
   font-size: 0.8em;
 }
-.conteneur__principal__restaurant__card__content i {
+.conteneur__principal__restaurant__card__content {
   position: relative;
-  text-align: end;
-  bottom: 30px;
-  right: 30px;
+  padding-bottom: 30px;
+}
+.conteneur__principal__restaurant__card__content i {
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  position: absolute;
+  top: 30px;
+  right: 25px;
   font-size: 1.5em;
 }
 .conteneur__principal__restaurant__card__content__txt {
+  margin-top: 15px;
   margin-left: 15px;
 }
 .conteneur__principal__restaurant__card__content__txt h3 {
   font-weight: 700;
-  margin-bottom: 5px;
 }
 .conteneur__principal__restaurant__card__content__txt p {
   font-weight: 300;

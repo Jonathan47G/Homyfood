@@ -1,0 +1,34 @@
+@import '../SASS/variables-mixins.scss';
+
+/************ BOUTON CTA *******************/
+.cta button:hover {
+    background:linear-gradient(175deg, lighten($primary-color,5%) 0%, lighten($secondarry-color, 5%)100%);
+    box-shadow: $ombre-button-assombri;
+}
+
+/************** COEUR CARD *************/
+/* Style pour le cœur vide */
+
+.heart-icone-regular i {
+    cursor: pointer; // Curseur de type pointer au survol
+    transition: background-size 750ms ease-in-out; // Transition fluide du remplissage
+    background-size: 100% 100%; // Remplissage complet par défaut
+    background-position: bottom; // Position du fond au bas
+}
+
+/* Style pour le cœur plein */
+.heart-icone-solid i {
+    cursor: pointer; // Curseur de type pointer au survol
+    opacity: 0; // Initialement caché
+    background: -webkit-linear-gradient($primary-color, $secondarry-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: opacity 750ms ease-in-out, background-size 750ms ease-in-out; // Transition fluide d'opacité et de remplissage
+    background-size: 100% 0; // Pas de remplissage par défaut
+}
+
+/* Au survol du cœur plein, afficher le remplissage */
+.heart-icone-solid:hover i {
+    opacity: 1;
+    background-size: 100% 100%;
+}

@@ -9,6 +9,10 @@
   padding-top: 22px;
   gap: 5px;
 }
+.footer__nav i {
+  width: 35px;
+  color: #fff;
+}
 .footer__nav a {
   text-decoration: none;
   color: #fff;

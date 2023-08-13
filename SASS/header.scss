@@ -5,14 +5,11 @@
 .header__principal {
   /* Flex container avec orientation en colonne */
   @include flex-property(flex, column);
-  width: 100%;
   text-align: center;
-  justify-content: center;
 /* Styles pour l'élément d'information */
   &__info {
     /* Flex container avec orientation en colonne */
     @include flex-property(flex, column);
-    width: 100%;
 /* Styles pour le logo */
     &__logo {
       position: relative;
@@ -26,16 +23,15 @@
     }
  /* Styles pour la localisation */
     &__localisation {
+      display: flex;
       background-color: $background-color;
-      width: 100%;
       padding-top: 15px;
       padding-bottom: 15px;
+      justify-content: center;
       button {
         font-size: 1em;
         font-weight: 500;
-        background-color: blue;
-        @include flex-property(flex, row);
-        justify-content: center;
+        display:flex;
         gap:15px;
         background-color: $background-color;
         border: none;
@@ -46,18 +42,14 @@
     }
      /* Styles pour le texte */
     &__txt {
-      width: 100%;
-      padding-top: 50px;
-      padding-bottom: 50px;
       background-color :#F6F6F6;
+      padding: 25px;
       
         h1{
           width: 90%;
-          font-size: 1.8em;
+          font-size: 1.5em;
           font-weight: 700;
-          margin-bottom: 10px;
-          margin-left: 15px;
-          box-sizing: border-box;
+          margin: 10px;
         }
         p {
           font-size: 1.125em;
@@ -70,10 +62,12 @@
    /* Styles pour le bouton Call to Action (cta) */
     .cta {
        /* Centre verticalement tout le contenu à l'intérieur du conteneur */
+       display: flex;
+       justify-content: center;
     align-items: center;
     margin-top: 40px;
     button {
-      width: 100%;
+      width: 220px;
       text-align: center;
       border-radius: 25px;
       background: $button-color;
@@ -82,7 +76,6 @@
       font-weight: 500;
       padding-top: 15px;
       padding-bottom: 15px;
-      width: 75%;
       border: none;
       box-shadow: $ombre-button;
     }

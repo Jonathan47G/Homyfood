@@ -25,6 +25,7 @@
     -webkit-text-fill-color: transparent;
     transition: opacity 750ms ease-in-out, background-size 750ms ease-in-out; // Transition fluide d'opacité et de remplissage
     background-size: 100% 0; // Pas de remplissage par défaut
+    background-position: top;
 }
 
 /* Au survol du cœur plein, afficher le remplissage */

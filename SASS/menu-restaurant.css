@@ -1,0 +1,53 @@
+.conteneur__principal__menu {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #F6F6F6;
+  gap: 40px;
+  padding: 17px;
+  padding-top: 35px;
+  padding-bottom: 50px;
+  margin-top: -25px;
+  border-radius: 25px;
+}
+.conteneur__principal__menu .heart-icone-regular .fa-heart {
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  position: absolute;
+  top: 30px;
+  right: 25px;
+  font-size: 1.5em;
+}
+.conteneur__principal__menu__header__titre {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.75em;
+  font-weight: 400;
+}
+.conteneur__principal__menu__repas {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+}
+.conteneur__principal__menu__repas .titre__repas {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1em;
+}
+.conteneur__principal__menu__repas .forme {
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+  margin-top: -10px;
+  margin-bottom: -5px;
+}
+.conteneur__principal__menu__repas__card {
+  display: block;
+}
+.conteneur__principal__menu__repas__card__content .overflow-ellipsis {
+  background-color: blue;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}/*# sourceMappingURL=menu-restaurant.css.map */

@@ -1,0 +1,55 @@
+@import 'variables-mixins.scss';
+
+.conteneur__principal__menu {
+    @include flex-property(flex, column);
+    position: relative;
+    background-color: #F6F6F6;
+    gap:40px;
+    padding: 17px;
+    padding-top: 35px;
+    padding-bottom: 50px;
+    margin-top: -25px;
+    border-radius: 25px;
+    .heart-icone-regular .fa-heart {
+        width: 24px;
+        height: 24px;
+        margin: 0;
+        position: absolute;
+        top:30px;
+        right:25px;
+        font-size: 1.5em;
+    }
+    &__header__titre {
+        font-family: $title-font;
+        font-size: 1.75em;
+        font-weight: 400;
+    }
+    &__repas {
+        .titre__repas {
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 1em;
+        }
+        .forme {
+            width: 40px;
+            height: 3px;
+            background-color: $third-color;
+            margin-top: -10px;
+            margin-bottom: -5px;
+        }
+        @include flex-property(flex, column);
+        gap:15px;
+        padding: 20px;
+        &__card {
+            display: block;
+            &__content {
+                .overflow-ellipsis {
+                    background-color: blue;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}

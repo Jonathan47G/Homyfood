@@ -1,29 +1,27 @@
-@import "../SASS/variables-mixins.scss";
+@import "variables-mixins.scss";
 
 .conteneur__principal {
   @include flex-property(flex, column);
-  margin-top: 50px;
+  margin-top: 20px;
   h2 {
-    margin-left: 25px;
+    margin-left: 15px;
   }
 
   &__fonctionnement {
     @include flex-property(flex, column);
     align-items: center;
-    margin-top: 50px;
-    padding-bottom: 50px;
+    padding : 50px;
     gap: 25px;
 
     &__card {
-      display: flex;
-      width: 75%;
-      gap: 25px;
+      width: 100%;
+      justify-content: center;
       align-items: center;
-      background-color: #f6f6f6;
-      padding: 20px;
-      border-radius: 25px;
-      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-      .solid-grey {
+      gap:30px;
+      .fa-mobile-screen-button {
+        margin-left: 10px;
+      }
+        .solid-grey {
         color: grey;
       }
       .solid-purple {
@@ -31,8 +29,8 @@
       }
       &__nombre {
         color: #fff;
-        position:relative;
-        left: -30px;
+        position:absolute;
+        left:20px;
         border-radius: 25px;
         background-color: $primary-color;
         width: 20px;
@@ -83,7 +81,7 @@
       &__content {
         position: relative;
         padding-bottom: 30px;
-        i {
+        .fa-heart {
           width: 24px;
           height: 24px;
           margin: 0;

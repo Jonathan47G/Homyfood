@@ -3,8 +3,44 @@
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 p, h1, h2, h3, a {
   font-family: "Roboto", sans-serif;
+}
+
+/* Styles pour le bouton Call to Action (cta) */
+.cta {
+  /* Centre verticalement tout le contenu à l'intérieur du conteneur */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+.cta button {
+  width: 220px;
+  text-align: center;
+  border-radius: 25px;
+  background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
+  color: white;
+  font-size: 1em;
+  font-weight: 500;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: none;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* Styles pour les divers CARDS */
+.card {
+  display: flex;
+  background-color: #f6f6f6;
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 
 /* Styles pour le header principal */
@@ -14,7 +50,6 @@ p, h1, h2, h3, a {
   flex-direction: column;
   text-align: center;
   /* Styles pour l'élément d'information */
-  /* Styles pour le bouton Call to Action (cta) */
 }
 .header__principal__info {
   /* Flex container avec orientation en colonne */
@@ -27,12 +62,11 @@ p, h1, h2, h3, a {
 .header__principal__info__logo {
   position: relative;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-  width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 .header__principal__info__logo img {
-  width: 66%;
+  height: 36px;
 }
 .header__principal__info__localisation {
   display: flex;
@@ -53,11 +87,11 @@ p, h1, h2, h3, a {
   width: 5%;
 }
 .header__principal__info__txt {
+  text-align: center;
   background-color: #F6F6F6;
   padding: 25px;
 }
 .header__principal__info__txt h1 {
-  width: 90%;
   font-size: 1.5em;
   font-weight: 700;
   margin: 10px;
@@ -66,52 +100,83 @@ p, h1, h2, h3, a {
   font-size: 1.125em;
   font-weight: 300;
 }
-.header__principal .cta {
-  /* Centre verticalement tout le contenu à l'intérieur du conteneur */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 40px;
+
+/********************************************************************/
+.header__principal__info {
+  position: relative;
 }
-.header__principal .cta button {
-  width: 220px;
-  text-align: center;
-  border-radius: 25px;
-  background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
-  color: white;
+.header__principal__info a {
+  position: absolute;
+  top: 14px;
+  left: 20px;
+}
+.header__principal__info a .fa-solid {
+  font-size: 1.5em;
+}
+.header__principal__info__restaurant {
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  color: #fff;
+  box-sizing: border-box;
+  padding-left: 25px;
+  padding-bottom: 22px;
+  padding-top: 22px;
+  gap: 5px;
+}
+.footer__nav i {
+  width: 35px;
+  color: #fff;
+}
+.footer__nav a {
+  color: #fff;
   font-size: 1em;
   font-weight: 500;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  border: none;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.footer__nav h3 {
+  font-size: 1.125em;
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
+}
+.footer__nav ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 16px;
+}
+.footer__nav ul li {
+  margin-top: 7px;
 }
 
 .conteneur__principal {
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 .conteneur__principal h2 {
-  margin-left: 25px;
+  margin-left: 15px;
 }
 .conteneur__principal__fonctionnement {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
-  padding-bottom: 50px;
+  padding: 50px;
   gap: 25px;
 }
 .conteneur__principal__fonctionnement__card {
-  display: flex;
-  width: 75%;
-  gap: 25px;
+  width: 100%;
+  justify-content: center;
   align-items: center;
-  background-color: #f6f6f6;
-  padding: 20px;
-  border-radius: 25px;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  gap: 30px;
+}
+.conteneur__principal__fonctionnement__card .fa-mobile-screen-button {
+  margin-left: 10px;
 }
 .conteneur__principal__fonctionnement__card .solid-grey {
   color: grey;
@@ -121,8 +186,8 @@ p, h1, h2, h3, a {
 }
 .conteneur__principal__fonctionnement__card__nombre {
   color: #fff;
-  position: relative;
-  left: -30px;
+  position: absolute;
+  left: 20px;
   border-radius: 25px;
   background-color: #9356DC;
   width: 20px;
@@ -177,7 +242,7 @@ p, h1, h2, h3, a {
   position: relative;
   padding-bottom: 30px;
 }
-.conteneur__principal__restaurant__card__content i {
+.conteneur__principal__restaurant__card__content .fa-heart {
   width: 24px;
   height: 24px;
   margin: 0;
@@ -196,41 +261,6 @@ p, h1, h2, h3, a {
 .conteneur__principal__restaurant__card__content__txt p {
   font-weight: 300;
   font-size: 1.075em;
-}
-
-.footer__nav {
-  display: flex;
-  flex-direction: column;
-  background-color: #353535;
-  color: #fff;
-  box-sizing: border-box;
-  padding-left: 25px;
-  padding-bottom: 22px;
-  padding-top: 22px;
-  gap: 5px;
-}
-.footer__nav i {
-  width: 35px;
-  color: #fff;
-}
-.footer__nav a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 1em;
-  font-weight: 500;
-}
-.footer__nav h3 {
-  font-size: 1.125em;
-  font-family: "Shrikhand", cursive;
-  font-weight: 400;
-}
-.footer__nav ul {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 16px;
-}
-.footer__nav ul li {
-  margin-top: 7px;
 }
 
 /************ BOUTON CTA *******************/
@@ -264,4 +294,58 @@ p, h1, h2, h3, a {
 .heart-icone-solid:hover i {
   opacity: 1;
   background-size: 100% 100%;
+}
+
+.conteneur__principal__menu {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #F6F6F6;
+  gap: 40px;
+  padding: 17px;
+  padding-top: 35px;
+  padding-bottom: 50px;
+  margin-top: -25px;
+  border-radius: 25px;
+}
+.conteneur__principal__menu .heart-icone-regular .fa-heart {
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  position: absolute;
+  top: 30px;
+  right: 25px;
+  font-size: 1.5em;
+}
+.conteneur__principal__menu__header__titre {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.75em;
+  font-weight: 400;
+}
+.conteneur__principal__menu__repas {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+}
+.conteneur__principal__menu__repas .titre__repas {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1em;
+}
+.conteneur__principal__menu__repas .forme {
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+  margin-top: -10px;
+  margin-bottom: -5px;
+}
+.conteneur__principal__menu__repas__card {
+  display: block;
+}
+.conteneur__principal__menu__repas__card__content .overflow-ellipsis {
+  background-color: blue;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }/*# sourceMappingURL=style.css.map */

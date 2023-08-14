@@ -7,7 +7,7 @@
 
 /************** COEUR CARD *************/
 /* Style pour le cœur vide */
-.heart-icone-regular i {
+.heart-icone-regular .fa-heart {
   cursor: pointer;
   transition: background-size 750ms ease-in-out;
   background-size: 100% 100%;
@@ -15,7 +15,7 @@
 }
 
 /* Style pour le cœur plein */
-.heart-icone-solid i {
+.heart-icone-solid .fa-heart {
   cursor: pointer;
   opacity: 0;
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
@@ -27,7 +27,7 @@
 }
 
 /* Au survol du cœur plein, afficher le remplissage */
-.heart-icone-solid:hover i {
+.heart-icone-solid:hover .fa-heart {
   opacity: 1;
   background-size: 100% 100%;
 }/*# sourceMappingURL=animation.css.map */

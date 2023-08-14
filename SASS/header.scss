@@ -1,4 +1,4 @@
-@import "../SASS/variables-mixins.scss";
+@import "variables-mixins.scss";
 
 
 /* Styles pour le header principal */
@@ -14,11 +14,10 @@
     &__logo {
       position: relative;
       box-shadow: $ombre-box;
-      width: 100%;
       padding-top: 10px;
       padding-bottom: 10px;
       img {
-        width: 66%;
+        height: 36px;
       }
     }
  /* Styles pour la localisation */
@@ -42,11 +41,11 @@
     }
      /* Styles pour le texte */
     &__txt {
+      text-align: center;
       background-color :#F6F6F6;
       padding: 25px;
       
         h1{
-          width: 90%;
           font-size: 1.5em;
           font-weight: 700;
           margin: 10px;
@@ -57,27 +56,24 @@
         }
         
     }
-    
   }
-   /* Styles pour le bouton Call to Action (cta) */
-    .cta {
-       /* Centre verticalement tout le contenu à l'intérieur du conteneur */
-       display: flex;
-       justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-    button {
-      width: 220px;
-      text-align: center;
-      border-radius: 25px;
-      background: $button-color;
-      color: white;
-      font-size: 1em;
-      font-weight: 500;
-      padding-top: 15px;
-      padding-bottom: 15px;
-      border: none;
-      box-shadow: $ombre-button;
+}
+  
+/********************************************************************/
+.header__principal__info {
+  position: relative;
+  a {
+    position: absolute;
+    top:14px;
+    left: 20px;
+    .fa-solid {
+      font-size: 1.5em;
     }
+  }
+  
+  &__restaurant {
+    height: 300px;
+    object-fit: cover;
+    position: relative;
   }
 }

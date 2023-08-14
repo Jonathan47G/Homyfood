@@ -1,28 +1,26 @@
 .conteneur__principal {
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 .conteneur__principal h2 {
-  margin-left: 25px;
+  margin-left: 15px;
 }
 .conteneur__principal__fonctionnement {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
-  padding-bottom: 50px;
+  padding: 50px;
   gap: 25px;
 }
 .conteneur__principal__fonctionnement__card {
-  display: flex;
-  width: 75%;
-  gap: 25px;
+  width: 100%;
+  justify-content: center;
   align-items: center;
-  background-color: #f6f6f6;
-  padding: 20px;
-  border-radius: 25px;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  gap: 30px;
+}
+.conteneur__principal__fonctionnement__card .fa-mobile-screen-button {
+  margin-left: 10px;
 }
 .conteneur__principal__fonctionnement__card .solid-grey {
   color: grey;
@@ -32,8 +30,8 @@
 }
 .conteneur__principal__fonctionnement__card__nombre {
   color: #fff;
-  position: relative;
-  left: -30px;
+  position: absolute;
+  left: 20px;
   border-radius: 25px;
   background-color: #9356DC;
   width: 20px;
@@ -88,7 +86,7 @@
   position: relative;
   padding-bottom: 30px;
 }
-.conteneur__principal__restaurant__card__content i {
+.conteneur__principal__restaurant__card__content .fa-heart {
   width: 24px;
   height: 24px;
   margin: 0;

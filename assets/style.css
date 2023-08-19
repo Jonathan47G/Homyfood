@@ -8,7 +8,11 @@ a {
   color: #000;
 }
 
-p, h1, h2, h3, a {
+p,
+h1,
+h2,
+h3,
+a {
   font-family: "Roboto", sans-serif;
 }
 
@@ -32,15 +36,25 @@ p, h1, h2, h3, a {
   padding-bottom: 15px;
   border: none;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  transition: all 0.5s ease-in-out;
 }
 
 /* Styles pour les divers CARDS */
 .card {
   display: flex;
+  font-weight: 500;
+  white-space: nowrap;
+  box-sizing: content-box;
   background-color: #f6f6f6;
   padding: 20px;
   border-radius: 25px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+
+.overflow-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* Styles pour le header principal */
@@ -101,7 +115,7 @@ p, h1, h2, h3, a {
   font-weight: 300;
 }
 
-/********************************************************************/
+/****************Style header Restaurant**********************************/
 .header__principal__info {
   position: relative;
 }
@@ -138,7 +152,7 @@ p, h1, h2, h3, a {
 .footer__nav a {
   color: #fff;
   font-size: 1em;
-  font-weight: 500;
+  font-weight: 400;
 }
 .footer__nav h3 {
   font-size: 1.125em;
@@ -208,7 +222,7 @@ p, h1, h2, h3, a {
   flex-direction: column;
   margin-left: 5%;
   margin-right: 5%;
-  gap: 25px;
+  padding-bottom: 0;
   border-radius: 15px;
   text-decoration: none;
   color: #000;
@@ -219,7 +233,7 @@ p, h1, h2, h3, a {
 }
 .conteneur__principal__restaurant__card__img img {
   width: 100%;
-  height: 250px;
+  height: 190px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15px 15px 0 0;
@@ -240,20 +254,21 @@ p, h1, h2, h3, a {
 }
 .conteneur__principal__restaurant__card__content {
   position: relative;
-  padding-bottom: 30px;
 }
-.conteneur__principal__restaurant__card__content .fa-heart {
-  width: 24px;
-  height: 24px;
+.conteneur__principal__restaurant__card__content__logo {
+  position: relative;
+}
+.conteneur__principal__restaurant__card__content__logo .fa-heart {
   margin: 0;
   position: absolute;
-  top: 30px;
-  right: 25px;
   font-size: 1.5em;
+  top: -45px;
+  right: 40px;
 }
 .conteneur__principal__restaurant__card__content__txt {
-  margin-top: 15px;
-  margin-left: 15px;
+  padding-bottom: 12px;
+  padding-top: 15px;
+  padding-left: 15px;
 }
 .conteneur__principal__restaurant__card__content__txt h3 {
   font-weight: 700;
@@ -263,44 +278,11 @@ p, h1, h2, h3, a {
   font-size: 1.075em;
 }
 
-/************ BOUTON CTA *******************/
-.cta button:hover {
-  background: linear-gradient(175deg, #a16be0 0%, #ff93e1 100%);
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
-}
-
-/************** COEUR CARD *************/
-/* Style pour le cœur vide */
-.heart-icone-regular i {
-  cursor: pointer;
-  transition: background-size 750ms ease-in-out;
-  background-size: 100% 100%;
-  background-position: bottom;
-}
-
-/* Style pour le cœur plein */
-.heart-icone-solid i {
-  cursor: pointer;
-  opacity: 0;
-  background: -webkit-linear-gradient(#9356DC, #FF79DA);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: opacity 750ms ease-in-out, background-size 750ms ease-in-out;
-  background-size: 100% 0;
-  background-position: top;
-}
-
-/* Au survol du cœur plein, afficher le remplissage */
-.heart-icone-solid:hover i {
-  opacity: 1;
-  background-size: 100% 100%;
-}
-
 .conteneur__principal__menu {
   display: flex;
   flex-direction: column;
   position: relative;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   gap: 40px;
   padding: 17px;
   padding-top: 35px;
@@ -308,7 +290,8 @@ p, h1, h2, h3, a {
   margin-top: -25px;
   border-radius: 25px;
 }
-.conteneur__principal__menu .heart-icone-regular .fa-heart {
+.conteneur__principal__menu .heart-icone-regular,
+.conteneur__principal__menu .heart-icone-solid {
   width: 24px;
   height: 24px;
   margin: 0;
@@ -341,11 +324,366 @@ p, h1, h2, h3, a {
   margin-bottom: -5px;
 }
 .conteneur__principal__menu__repas__card {
-  display: block;
+  justify-content: space-between;
+  align-items: end;
+  padding: 0;
+  height: 69px;
 }
-.conteneur__principal__menu__repas__card__content .overflow-ellipsis {
-  background-color: blue;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.conteneur__principal__menu__repas__card__content {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.conteneur__principal__menu__repas__card__prix-validation {
+  display: flex;
+  align-items: flex-end;
   white-space: nowrap;
+}
+.conteneur__principal__menu__repas__card__prix-validation .prix {
+  display: flex;
+  text-align: end;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+.conteneur__principal__menu__repas__card__prix-validation .animation-validation {
+  display: flex;
+  opacity: 0;
+  width: 0;
+  height: 69px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 25px 25px 0;
+  text-align: center;
+  background-color: #99E2D0;
+  color: #fff;
+}
+.conteneur__principal__menu .cta {
+  margin: 0;
+}
+
+/******************LOADER ******************/
+.conteneur__loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: hide-loader 5s forwards;
+}
+.conteneur__loader .loader {
+  margin-top: 100px;
+  border: 8px solid #9356DC;
+  border-top: 8px solid #FF79DA;
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  animation: spin 2s linear infinite;
+}
+.conteneur__loader .animation__logo {
+  width: 60%;
+  animation: logo 2000ms;
+}
+
+@keyframes logo {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes hide-loader {
+  0% {
+    display: flex;
+  }
+  100% {
+    display: none;
+  }
+}
+/************ BOUTON CTA *******************/
+.cta button:hover {
+  background: linear-gradient(175deg, #a16be0 0%, #ff93e1 100%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease-in-out;
+}
+
+/************** COEUR CARD *************/
+/* Style pour le cœur vide */
+.heart-icone-regular .fa-heart {
+  cursor: pointer;
+  transition: background-size 750ms ease-in-out;
+  background-size: 100% 100%;
+  background-position: bottom;
+}
+
+/* Style pour le cœur plein */
+.heart-icone-solid .fa-heart {
+  cursor: pointer;
+  opacity: 0;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 750ms ease-in-out, background-size 750ms ease-in-out;
+  background-size: 100% 0;
+  background-position: top;
+}
+
+/* Au survol du cœur plein, afficher le remplissage */
+.heart-icone-solid:hover .fa-heart {
+  opacity: 1;
+  background-size: 100% 100%;
+}
+
+/**************BOUTON VALIDEE***************/
+.conteneur__principal__menu__repas__card:hover .animation-validation {
+  opacity: 1;
+  transition: opacity 750ms ease-in-out, width 750ms ease-in-out;
+  width: 59px;
+}
+
+.animation-validation {
+  display: none;
+  transition: opacity 350ms ease-in-out, width 750ms;
+}
+
+/****************APARITION MENU ***************/
+@keyframes slidein {
+  0% {
+    display: none;
+    width: 0%;
+    opacity: 0;
+  }
+  100% {
+    display: flex;
+    width: 100%;
+    opacity: 1;
+  }
+}
+.conteneur__principal__menu__repas__card.animation-repas1 {
+  animation-delay: 700ms;
+  opacity: 0;
+  animation-duration: 2s;
+  animation-name: slidein;
+  animation-fill-mode: both;
+}
+
+.conteneur__principal__menu__repas__card.animation-repas2 {
+  animation-delay: 1400ms;
+  opacity: 0;
+  animation-duration: 2s;
+  animation-name: slidein;
+  animation-fill-mode: both;
+}
+
+.conteneur__principal__menu__repas__card.animation-repas3 {
+  animation-delay: 2100ms;
+  opacity: 0;
+  animation-duration: 2s;
+  animation-name: slidein;
+  animation-fill-mode: both;
+}
+
+.conteneur__principal__menu__repas__card.animation-repas4 {
+  animation-delay: 2800ms;
+  opacity: 0;
+  animation-duration: 2s;
+  animation-name: slidein;
+  animation-fill-mode: both;
+}
+
+.conteneur__principal__menu__repas__card.animation-repas5 {
+  animation-delay: 3500ms;
+  opacity: 0;
+  animation-duration: 2s;
+  animation-name: slidein;
+  animation-fill-mode: both;
+}
+
+.conteneur__principal__menu__repas__card.animation-repas6 {
+  animation-delay: 4200ms;
+  opacity: 0;
+  animation-duration: 2s;
+  animation-name: slidein;
+  animation-fill-mode: both;
+}
+
+.conteneur__principal__menu__repas__card.animation-repas7 {
+  animation-delay: 4900ms;
+  opacity: 0;
+  animation-duration: 2s;
+  animation-name: slidein;
+  animation-fill-mode: both;
+}
+
+.conteneur__principal__menu__repas__card.animation-repas8 {
+  animation-delay: 5600ms;
+  opacity: 0;
+  animation-duration: 2s;
+  animation-name: slidein;
+  animation-fill-mode: both;
+}
+
+.conteneur__principal__menu__repas__card.animation-repas9 {
+  animation-delay: 6300ms;
+  opacity: 0;
+  animation-duration: 2s;
+  animation-name: slidein;
+  animation-fill-mode: both;
+}
+
+@media screen and (min-width: 1050px) {
+  .header__principal__info__txt h1 {
+    font-size: 2.5em;
+  }
+  .section__acceuil {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .section__acceuil h2 {
+    margin: 0;
+  }
+  .section__acceuil .regroupement__card__fontionnement {
+    min-width: 1080px;
+  }
+  .conteneur__principal {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+    /****************SECTION FONCTIONNEMENT****************/
+    /************************SECTION RESTAURANT*************/
+  }
+  .conteneur__principal__fonctionnement {
+    width: 100%;
+    padding: 0;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 35px;
+    gap: 35px;
+  }
+  .conteneur__principal__fonctionnement__card {
+    box-sizing: content-box;
+    margin: 0;
+    gap: 25px;
+    margin-top: 25px;
+    padding-left: 40px;
+    padding-right: 50px;
+    position: relative;
+  }
+  .conteneur__principal__fonctionnement__card__nombre {
+    left: -10px;
+  }
+  .conteneur__principal__restaurant {
+    padding-top: 30px;
+    display: grid;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 490px 490px;
+    box-sizing: border-box;
+    margin: 0;
+    -moz-column-gap: 100px;
+         column-gap: 100px;
+    row-gap: 50px;
+    /********************CARD FONCTIONNEMENT*************/
+  }
+  .conteneur__principal__restaurant h2 {
+    row-gap: 25px;
+    display: flex;
+    grid-row: 1/2;
+    grid-column: 1/3;
+  }
+  .conteneur__principal__restaurant__card {
+    margin: 0;
+  }
+  /****************FOOTER ******************/
+  .footer__nav {
+    flex-direction: row-reverse;
+    justify-content: end;
+    align-items: flex-end;
+    padding: 0;
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+  .footer__nav h3 {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 100px;
+    margin-right: 25px;
+  }
+  .footer__nav ul {
+    display: flex;
+    list-style-position: inside;
+    gap: 25px;
+  }
+  .footer__nav ul li:nth-child(2) {
+    padding-right: 100px;
+  }
+  .footer__nav ul li {
+    white-space: nowrap;
+  }
+  /************************FIN ACCEUIL ********************/
+  /************************PAGE RESTAURANT ****************/
+  .body-restaurant {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  .body-restaurant .header__principal {
+    width: 100%;
+  }
+  .body-restaurant .header__principal__info {
+    width: 100%;
+    height: 100%;
+  }
+  .body-restaurant .header__principal__info .header__principal__info__restaurant {
+    -o-object-position: 70% 60%;
+       object-position: 70% 60%;
+    height: 400px;
+    box-sizing: border-box;
+  }
+  .body-restaurant .conteneur__principal__menu {
+    width: 70%;
+    padding-top: 50px;
+    align-items: center;
+    border-radius: 25px 25px 0 0;
+  }
+  .body-restaurant .conteneur__principal__menu .heart-icone-regular,
+  .body-restaurant .conteneur__principal__menu .heart-icone-solid {
+    right: 370px;
+    top: 55px;
+  }
+  .body-restaurant .conteneur__principal__menu__header {
+    text-align: center;
+  }
+  .body-restaurant .conteneur__principal__menu__repas {
+    width: 60%;
+  }
+  .body-restaurant .footer__nav {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   gap: 40px;
   padding: 17px;
   padding-top: 35px;
@@ -10,7 +10,8 @@
   margin-top: -25px;
   border-radius: 25px;
 }
-.conteneur__principal__menu .heart-icone-regular .fa-heart {
+.conteneur__principal__menu .heart-icone-regular,
+.conteneur__principal__menu .heart-icone-solid {
   width: 24px;
   height: 24px;
   margin: 0;
@@ -43,11 +44,43 @@
   margin-bottom: -5px;
 }
 .conteneur__principal__menu__repas__card {
-  display: block;
+  justify-content: space-between;
+  align-items: end;
+  padding: 0;
+  height: 69px;
 }
-.conteneur__principal__menu__repas__card__content .overflow-ellipsis {
-  background-color: blue;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.conteneur__principal__menu__repas__card__content {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.conteneur__principal__menu__repas__card__prix-validation {
+  display: flex;
+  align-items: flex-end;
   white-space: nowrap;
+}
+.conteneur__principal__menu__repas__card__prix-validation .prix {
+  display: flex;
+  text-align: end;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+.conteneur__principal__menu__repas__card__prix-validation .animation-validation {
+  display: flex;
+  opacity: 0;
+  width: 0;
+  height: 69px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 25px 25px 0;
+  text-align: center;
+  background-color: #99E2D0;
+  color: #fff;
+}
+.conteneur__principal__menu .cta {
+  margin: 0;
 }/*# sourceMappingURL=menu-restaurant.css.map */

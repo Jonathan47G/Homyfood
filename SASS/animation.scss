@@ -1,35 +1,134 @@
-@import 'variables-mixins.scss';
+@import "variables-mixins.scss";
+/******************LOADER ******************/
+.conteneur__loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: hide-loader 5s forwards;
 
+  .loader {
+    margin-top: 100px;
+    border: 8px solid $primary-color;
+    border-top: 8px solid $secondarry-color;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    animation: spin 2s linear infinite;
+  }
+
+  .animation__logo {
+    width: 60%;
+    animation: logo 2000ms;
+  }
+}
+@keyframes logo {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes hide-loader {
+  0% {
+    display: flex;
+  }
+  100% {
+    display: none;
+  }
+}
 /************ BOUTON CTA *******************/
 .cta button:hover {
-    background:linear-gradient(175deg, lighten($primary-color,5%) 0%, lighten($secondarry-color, 5%)100%);
-    box-shadow: $ombre-button-assombri;
+  background: linear-gradient(
+    175deg,
+    lighten($primary-color, 5%) 0%,
+    lighten($secondarry-color, 5%) 100%
+  );
+  box-shadow: $ombre-button-assombri;
+  transition: all 0.5s ease-in-out;
 }
 
 /************** COEUR CARD *************/
 /* Style pour le cœur vide */
 
 .heart-icone-regular .fa-heart {
-    cursor: pointer; // Curseur de type pointer au survol
-    transition: background-size 750ms ease-in-out; // Transition fluide du remplissage
-    background-size: 100% 100%; // Remplissage complet par défaut
-    background-position: bottom; // Position du fond au bas
+  cursor: pointer; // Curseur de type pointer au survol
+  transition: background-size 750ms ease-in-out; // Transition fluide du remplissage
+  background-size: 100% 100%; // Remplissage complet par défaut
+  background-position: bottom; // Position du fond au bas
 }
-
 /* Style pour le cœur plein */
 .heart-icone-solid .fa-heart {
-    cursor: pointer; // Curseur de type pointer au survol
-    opacity: 0; // Initialement caché
-    background: -webkit-linear-gradient($primary-color, $secondarry-color);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: opacity 750ms ease-in-out, background-size 750ms ease-in-out; // Transition fluide d'opacité et de remplissage
-    background-size: 100% 0; // Pas de remplissage par défaut
-    background-position: top;
+  cursor: pointer; // Curseur de type pointer au survol
+  opacity: 0; // Initialement caché
+  background: -webkit-linear-gradient($primary-color, $secondarry-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 750ms ease-in-out, background-size 750ms ease-in-out; // Transition fluide d'opacité et de remplissage
+  background-size: 100% 0; // Pas de remplissage par défaut
+  background-position: top;
 }
-
 /* Au survol du cœur plein, afficher le remplissage */
 .heart-icone-solid:hover .fa-heart {
+  opacity: 1;
+  background-size: 100% 100%;
+}
+
+/**************BOUTON VALIDEE***************/
+.conteneur__principal__menu__repas__card:hover {
+  .animation-validation {
     opacity: 1;
-    background-size: 100% 100%;
+    transition: opacity 750ms ease-in-out, width 750ms ease-in-out; // Transition fluide d'opacité et de déplie
+    width: 59px;
+  }
+}
+
+.animation-validation {
+  display: none;
+  transition: opacity 350ms ease-in-out, width 750ms; // Transition fluide d'opacité et replie
+}
+
+/****************APARITION MENU ***************/
+
+@keyframes slidein {
+  0% {
+    display: none;
+    width: 0%;
+    opacity: 0;
+  }
+
+  100% {
+    display: flex;
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@for $i from 1 through 9 {
+  // Changez 5 au nombre total d'éléments
+  .conteneur__principal__menu__repas__card.animation-repas#{$i} {
+    animation-delay: $i * 700ms; // Le délai sera différent pour chaque élément
+    opacity: 0;
+    animation-duration: 2s;
+    animation-name: slidein;
+    animation-fill-mode: both;
+  }
 }

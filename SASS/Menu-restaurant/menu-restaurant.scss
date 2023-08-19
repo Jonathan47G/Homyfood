@@ -1,4 +1,4 @@
-@import "variables-mixins.scss";
+@import "../Variable-mixins/variables-mixins.scss";
 
 .conteneur__principal__menu {
   @include flex-property(flex, column);
@@ -53,6 +53,14 @@
         margin-left: 20px;
         @include flex-property(flex, column);
         min-width: 0;
+        h3 {
+          font-size: 1.125em;
+          font-weight: 500;
+        }
+        p {
+          font-size: 0.95em;
+          font-weight: 300;
+        }
       }
       &__prix-validation {
         display: flex;
@@ -63,6 +71,9 @@
           text-align: end;
           margin-right: 15px;
           margin-bottom: 15px;
+          font-size: 0.95em;
+          font-weight: 700;
+          margin-left: 15px;
         }
         .animation-validation {
           display: flex;

@@ -338,6 +338,14 @@ a {
   flex-direction: column;
   min-width: 0;
 }
+.conteneur__principal__menu__repas__card__content h3 {
+  font-size: 1.125em;
+  font-weight: 500;
+}
+.conteneur__principal__menu__repas__card__content p {
+  font-size: 0.95em;
+  font-weight: 300;
+}
 .conteneur__principal__menu__repas__card__prix-validation {
   display: flex;
   align-items: flex-end;
@@ -348,6 +356,9 @@ a {
   text-align: end;
   margin-right: 15px;
   margin-bottom: 15px;
+  font-size: 0.95em;
+  font-weight: 700;
+  margin-left: 15px;
 }
 .conteneur__principal__menu__repas__card__prix-validation .animation-validation {
   display: flex;
@@ -390,15 +401,18 @@ a {
   animation: spin 2s linear infinite;
 }
 .conteneur__loader .animation__logo {
-  width: 60%;
-  animation: logo 2000ms;
+  opacity: 0;
+  width: 35%;
+  animation: logo 2500ms 1500ms both;
 }
 
 @keyframes logo {
   0% {
+    opacity: 0;
     transform: scaleY(0);
   }
   100% {
+    opacity: 1;
     transform: scaleY(1);
   }
 }
@@ -543,6 +557,14 @@ a {
 
 .conteneur__principal__menu__repas__card.animation-repas9 {
   animation-delay: 6300ms;
+  opacity: 0;
+  animation-duration: 2s;
+  animation-name: slidein;
+  animation-fill-mode: both;
+}
+
+.conteneur__principal__menu__repas__card.animation-repas10 {
+  animation-delay: 7000ms;
   opacity: 0;
   animation-duration: 2s;
   animation-name: slidein;

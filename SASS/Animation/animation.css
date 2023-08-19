@@ -24,15 +24,18 @@
   animation: spin 2s linear infinite;
 }
 .conteneur__loader .animation__logo {
-  width: 60%;
-  animation: logo 2000ms;
+  opacity: 0;
+  width: 35%;
+  animation: logo 2500ms 1500ms both;
 }
 
 @keyframes logo {
   0% {
+    opacity: 0;
     transform: scaleY(0);
   }
   100% {
+    opacity: 1;
     transform: scaleY(1);
   }
 }
@@ -177,6 +180,14 @@
 
 .conteneur__principal__menu__repas__card.animation-repas9 {
   animation-delay: 6300ms;
+  opacity: 0;
+  animation-duration: 2s;
+  animation-name: slidein;
+  animation-fill-mode: both;
+}
+
+.conteneur__principal__menu__repas__card.animation-repas10 {
+  animation-delay: 7000ms;
   opacity: 0;
   animation-duration: 2s;
   animation-name: slidein;

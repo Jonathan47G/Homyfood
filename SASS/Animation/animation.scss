@@ -1,68 +1,65 @@
 @import "../Variable-mixins/variables-mixins.scss";
 /******************LOADER ******************/
-.conteneur__loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 1);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  animation: hide-loader 5s forwards;
+  .conteneur__loader {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 1);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: hide-loader 5s forwards;
 
-  .loader {
-    margin-top: 100px;
-    border: 8px solid $primary-color;
-    border-top: 8px solid $secondarry-color;
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    animation: spin 2s linear infinite;
+    .loader {
+      margin-top: 100px;
+      border: 8px solid $primary-color;
+      border-top: 8px solid $secondarry-color;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      animation: spin 2s linear infinite;
+    }
+
+    .animation__logo {
+      opacity: 0;
+      width: 35%;
+      max-width: 400px;
+      animation: logo 2500ms 1500ms both;
+    }
+  }
+  @keyframes logo {
+    0% {
+      opacity: 0;
+      transform: scaleY(0);
+    }
+    100% {
+      opacity: 1;
+      transform: scaleY(1);
+    }
   }
 
-  .animation__logo {
-    opacity: 0;
-    width: 35%;
-    max-width: 400px;
-    animation: logo 2500ms 1500ms both;
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
-}
-@keyframes logo {
-  0% {
-    opacity: 0;
-    transform: scaleY(0);
-  }
-  100% {
-    opacity: 1;
-    transform: scaleY(1);
-  }
-}
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
+  @keyframes hide-loader {
+    80% {
+      visibility: visible;
+    }
+    100% {
+      visibility: hidden;
+      display: none;
+    }
   }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes hide-loader {
-  0% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    display: none;
-  }
-}
 /************ BOUTON CTA *******************/
 .cta button:hover {
   background: linear-gradient(
@@ -118,13 +115,12 @@
 
 @keyframes slidein {
   0% {
-    display: none;
+    visibility: hidden;
     width: 0%;
     opacity: 0;
   }
 
   100% {
-    display: flex;
     width: 100%;
     opacity: 1;
   }

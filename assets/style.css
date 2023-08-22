@@ -379,12 +379,12 @@ a {
 /******************LOADER ******************/
 .conteneur__loader {
   position: fixed;
+  display: flex;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgb(255, 255, 255);
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -426,14 +426,11 @@ a {
   }
 }
 @keyframes hide-loader {
-  0% {
-    opacity: 1;
-  }
   80% {
-    opacity: 1;
+    visibility: visible;
   }
   100% {
-    opacity: 0;
+    visibility: hidden;
     display: none;
   }
 }
@@ -486,12 +483,11 @@ a {
 /****************APARITION MENU ***************/
 @keyframes slidein {
   0% {
-    display: none;
+    visibility: hidden;
     width: 0%;
     opacity: 0;
   }
   100% {
-    display: flex;
     width: 100%;
     opacity: 1;
   }

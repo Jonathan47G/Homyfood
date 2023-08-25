@@ -10,15 +10,13 @@
   margin-top: -25px;
   border-radius: 25px;
 }
-.conteneur__principal__menu .heart-icone-regular,
-.conteneur__principal__menu .heart-icone-solid {
+.conteneur__principal__menu .conteneur__principal__restaurant__card__content__logo {
+  right: 0;
+  top: 85px;
   width: 24px;
   height: 24px;
   margin: 0;
   position: absolute;
-  top: 30px;
-  right: 25px;
-  font-size: 1.5em;
 }
 .conteneur__principal__menu__header__titre {
   font-family: "Shrikhand", cursive;
@@ -79,6 +77,106 @@
   font-size: 0.95em;
   font-weight: 700;
   margin-left: 15px;
+}
+.conteneur__principal__menu__repas__card__prix-validation #button_check-validation1 {
+  cursor: pointer;
+  width: 90%;
+  height: 69px;
+  position: absolute;
+  right: 5%;
+  opacity: 1;
+  z-index: 250;
+  opacity: 0;
+}
+.conteneur__principal__menu__repas__card__prix-validation #button_check-validation2 {
+  cursor: pointer;
+  width: 90%;
+  height: 69px;
+  position: absolute;
+  right: 5%;
+  opacity: 1;
+  z-index: 250;
+  opacity: 0;
+}
+.conteneur__principal__menu__repas__card__prix-validation #button_check-validation3 {
+  cursor: pointer;
+  width: 90%;
+  height: 69px;
+  position: absolute;
+  right: 5%;
+  opacity: 1;
+  z-index: 250;
+  opacity: 0;
+}
+.conteneur__principal__menu__repas__card__prix-validation #button_check-validation4 {
+  cursor: pointer;
+  width: 90%;
+  height: 69px;
+  position: absolute;
+  right: 5%;
+  opacity: 1;
+  z-index: 250;
+  opacity: 0;
+}
+.conteneur__principal__menu__repas__card__prix-validation #button_check-validation5 {
+  cursor: pointer;
+  width: 90%;
+  height: 69px;
+  position: absolute;
+  right: 5%;
+  opacity: 1;
+  z-index: 250;
+  opacity: 0;
+}
+.conteneur__principal__menu__repas__card__prix-validation #button_check-validation6 {
+  cursor: pointer;
+  width: 90%;
+  height: 69px;
+  position: absolute;
+  right: 5%;
+  opacity: 1;
+  z-index: 250;
+  opacity: 0;
+}
+.conteneur__principal__menu__repas__card__prix-validation #button_check-validation7 {
+  cursor: pointer;
+  width: 90%;
+  height: 69px;
+  position: absolute;
+  right: 5%;
+  opacity: 1;
+  z-index: 250;
+  opacity: 0;
+}
+.conteneur__principal__menu__repas__card__prix-validation #button_check-validation8 {
+  cursor: pointer;
+  width: 90%;
+  height: 69px;
+  position: absolute;
+  right: 5%;
+  opacity: 1;
+  z-index: 250;
+  opacity: 0;
+}
+.conteneur__principal__menu__repas__card__prix-validation #button_check-validation9 {
+  cursor: pointer;
+  width: 90%;
+  height: 69px;
+  position: absolute;
+  right: 5%;
+  opacity: 1;
+  z-index: 250;
+  opacity: 0;
+}
+.conteneur__principal__menu__repas__card__prix-validation #button_check-validation10 {
+  cursor: pointer;
+  width: 90%;
+  height: 69px;
+  position: absolute;
+  right: 5%;
+  opacity: 1;
+  z-index: 250;
+  opacity: 0;
 }
 .conteneur__principal__menu__repas__card__prix-validation .animation-validation {
   display: flex;

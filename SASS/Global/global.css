@@ -8,6 +8,12 @@ a {
   color: #000;
 }
 
+.conteneur__principal__restaurant__card__content__logo {
+  margin: 0;
+  position: absolute;
+  font-size: 1.3em;
+}
+
 p,
 h1,
 h2,

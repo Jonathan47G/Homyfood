@@ -127,10 +127,9 @@
     align-items: center;
     border-radius: 25px 25px 0 0;
     
-    .heart-icone-regular,
-  .heart-icone-solid {
-    right:370px;
-    top:55px;
+    .conteneur__principal__restaurant__card__content__logo{
+    right:25%;
+    top:100px;
   }
     &__header {
       text-align: center;

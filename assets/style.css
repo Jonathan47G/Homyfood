@@ -564,7 +564,46 @@ a {
   background-position: top;
 }
 
-input#heart-toggle {
+input#heart-toggle1 {
+  cursor: pointer;
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  font-size: 1.5em;
+  top: -45px;
+  right: 40px;
+  z-index: 100;
+  width: 24px;
+  height: 24px;
+}
+
+input#heart-toggle2 {
+  cursor: pointer;
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  font-size: 1.5em;
+  top: -45px;
+  right: 40px;
+  z-index: 100;
+  width: 24px;
+  height: 24px;
+}
+
+input#heart-toggle3 {
+  cursor: pointer;
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  font-size: 1.5em;
+  top: -45px;
+  right: 40px;
+  z-index: 100;
+  width: 24px;
+  height: 24px;
+}
+
+input#heart-toggle4 {
   cursor: pointer;
   margin: 0;
   opacity: 0;

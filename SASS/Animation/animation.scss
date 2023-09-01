@@ -90,7 +90,9 @@
   background-size: 100% 0;
   background-position: top;
 }
-input#heart-toggle {
+
+@for $i from 1 through 4 {
+input#heart-toggle#{$i} {
   cursor: pointer;
   margin: 0;
   opacity: 0;
@@ -101,6 +103,7 @@ input#heart-toggle {
   z-index: 100;
   width: 24px;
   height: 24px;
+}
 }
 
 /* Au clic sur le cœur plein, afficher le remplissage */
